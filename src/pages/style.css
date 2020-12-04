@@ -1,0 +1,284 @@
+div {
+    /* border: 1px solid black; */
+}
+
+.header-section {
+    width: 100%;
+    background-color: tomato;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 18px 5vw;
+    color: white;
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-nav a {
+    padding: 8px;
+    margin-right: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+.header-nav a:hover {
+    color: white;
+    text-decoration: none;
+    text-shadow: 2px 2px 10px gray;
+}
+
+.nav-item a{
+    padding: 8px;
+    margin-right: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-item a:hover {
+    color: white;
+    text-decoration: none;
+    text-shadow: 2px 2px 10px gray;
+}
+
+.drop-down {
+    position: relative;
+    display: inline-block;
+}
+  
+.drop-down-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+    color: black;
+    cursor: pointer;
+}
+  
+.drop-down:hover .drop-down-content {
+    display: block;
+}
+
+.home {
+    width: 100%;
+    margin-top: 82px;
+}
+
+.home-container {
+    margin: 12px 10vw 12px 10vw;
+}
+
+.home-title {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.card-container {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    justify-content: space-between;
+    margin-bottom: 18px;
+    transition: .3s;
+    padding: 10px;
+}
+
+.card-container:hover {
+    background-color: rgba(255,99,71,.5);
+}
+
+.card-body {
+    width: 65%;
+    padding-left: 12px;
+}
+
+.card-cover {
+    display: flex;
+}
+
+.card-image {
+    overflow: hidden;
+    height: 200px;
+}
+
+.card-image img {
+    object-fit:cover;
+    width: 100%;
+}
+
+.card-header {
+    width: 35%;
+}
+
+.card-upper {
+    display: flex;
+    align-items: center;
+}
+
+.card-left {
+    height: 60px;
+    width: 60px;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.card-left img {
+    height: 60px;
+    width: 60px;
+    object-fit: cover;
+}
+
+.card-right {
+    display: flex;
+    flex-direction: column;
+    line-height: 8px;
+    margin-left: 12px;
+}
+
+.card-modify {
+    position: relative;
+}
+
+.card-edit {
+    position: absolute;
+    right: 30px;
+    /* padding: 10px; */
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    margin-right: 12px;
+    background-color: white;
+    box-shadow: 1px 1px 10px gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.card-delete {
+    position: absolute;
+    right: 5px;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: 1px 1px 10px gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.card-delete:hover, .card-edit:hover {
+    background-color: tomato;
+    color: white;
+}
+
+.card-user {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.card-date {
+    font-size: 10px;
+    color: gray;
+    margin-top: -10px;
+}
+
+.btn-primary-custom {
+    background-color: tomato;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    padding: 0 12px;
+    color: white;
+    cursor: pointer;
+    height: 40px;
+    transition: .3s;
+}
+
+.btn-primary-custom:hover {
+    box-shadow: 1px 1px 10px gray;
+}
+
+.login-page {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: tomato;
+}
+
+.login-container {
+    height: 60%;
+    width: 30%;
+    background-color: white;
+    border-radius: 25px;
+    box-shadow: 2px 2px 20px gray;
+}
+
+.login-title {
+    margin-top: 48px;
+    text-align: center;
+}
+
+.login-form {
+    padding: 36px;
+}
+
+.w-50 {
+    width: 50%;
+}
+
+@media screen and (max-width: 768px) {
+    .card-container {
+        flex-direction: column-reverse;
+    }
+
+    .card-header {
+        width: 100%;
+    }
+
+    .card-body {
+        width: 100%;
+        padding-left: 12px;
+    }
+
+    .card-edit, .card-delete {
+        position: absolute;
+        /* padding: 10px; */
+        height: 25px;
+        width: 25px;
+    }
+
+    .card-cover {
+        flex-direction: column;
+    }
+
+    .login-container {
+        width: 60%;
+    }
+}
